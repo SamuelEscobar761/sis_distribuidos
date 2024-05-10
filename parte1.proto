@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package taxi;
+
+// Define un servicio TaxiService que puede ser utilizado para enviar y recibir datos de taxis
+service TaxiService {
+  rpc GetTaxiDetails (TaxiRequest) returns (TaxiDetails) {}
+}
+
+// Define la estructura de la solicitud para obtener detalles del taxi
+message TaxiRequest {
+  int64 taxi_id = 1;
+}
+
+// Define la estructura de los detalles del taxi que se devuelve al cliente
+message TaxiDetails {
+  int64 taxi_id = 1;
+  string conductor_id = 2;
+  repeated string pasajero_id = 3;
+  float costo_estimado = 4;
+}
