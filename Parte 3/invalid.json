@@ -1,0 +1,58 @@
+[
+    {
+      "taxi_id": 0,
+      "conductor_id": "Conductor_Val",
+      "pasajero_id": ["P1"],
+      "tipoViaje": "REGULAR",
+      "ubicacion": {
+        "lat": 15.0000,
+        "lng": 30.0000
+      },
+      "tiempo": "2024-05-06T12:00:00.000Z"
+    },
+    {
+      "taxi_id": 101,
+      "conductor_id": "",
+      "pasajero_id": ["P2"],
+      "tipoViaje": "POOL",
+      "ubicacion": {
+        "lat": 45.0000,
+        "lng": -75.0000
+      },
+      "tiempo": "2024-05-06T13:00:00.000Z"
+    },
+    {
+      "taxi_id": 102,
+      "conductor_id": "Conductor_Val2",
+      "pasajero_id": [],
+      "tipoViaje": "PREMIUM",
+      "ubicacion": {
+        "lat": 60.0000,
+        "lng": 90.0000
+      },
+      "tiempo": "2024-05-06T14:00:00.000Z"
+    },
+    {
+      "taxi_id": 103,
+      "conductor_id": "Conductor_Val3",
+      "pasajero_id": ["P4"],
+      "tipoViaje": "ADVENTURE",
+      "ubicacion": {
+        "lat": -89.0000,
+        "lng": 179.0000
+      },
+      "tiempo": "2024-05-06T15:00:00.000Z"
+    },
+    {
+      "taxi_id": 104,
+      "conductor_id": "Conductor_Val4",
+      "pasajero_id": ["P5"],
+      "tipoViaje": "REGULAR",
+      "ubicacion": {
+        "lat": -91.0000,
+        "lng": -181.0000
+      },
+      "tiempo": "2024-12-31T24:01:00.000Z"
+    }
+  ]
+  

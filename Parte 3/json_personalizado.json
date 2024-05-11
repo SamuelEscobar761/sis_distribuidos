@@ -1,0 +1,11 @@
+{
+    "taxi_id": 17,
+    "conductor_id": "Juan Perez",
+    "pasajero_id": ["P1", "P2", "P3"],
+    "tipoViaje": "POOL",
+    "ubicacion": {
+    "latitud": -24000.432243,
+    "longitud": -17.456632
+    },
+    "tiempo": "2024-04-2100T21:30:52.00Z"
+}
