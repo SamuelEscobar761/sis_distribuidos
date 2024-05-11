@@ -8,7 +8,7 @@ import parte1_pb2 as pb
 solicitud_1 = pb.TaxiDetails(
     taxi_id=12345,
     conductor_id='Sist_dist',
-    pasajero_id=['Codigo_UPB', 'Codigo_UPB10', 'Codigo_UPB20'],
+    pasajero_id=['56825', '56835', '56845'],
     costo_estimado=10
 )
 

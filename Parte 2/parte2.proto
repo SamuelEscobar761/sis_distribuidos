@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+// Enumeración de los tipos de viaje disponibles.
+enum TipoViaje {
+  REGULAR = 0;
+  POOL = 1;
+  PREMIUM = 2;
+}
+
+// Mensaje para capturar la ubicación geográfica con precisión.
+message Ubicacion {
+  double latitud = 1;  // Latitud geográfica del punto de inicio del viaje.
+  double longitud = 2; // Longitud geográfica del punto de inicio del viaje.
+}
+
+// Mensaje de solicitud para iniciar un viaje.
+message StartRequest {
+  int64 taxi_id = 1;           // Identificador único del taxi.
+  string conductor_id = 2;     // Identificador del conductor.
+  repeated string pasajero_id = 3; // Lista de identificadores de los pasajeros.
+  TipoViaje tipo_viaje = 4;    // Tipo de viaje deseado (REGULAR, POOL, PREMIUM).
+  Ubicacion ubicacion = 5;     // Ubicación de inicio del viaje.
+  google.protobuf.Timestamp tiempo = 6; // Momento en que se solicita el viaje.
+}
+
+// Mensaje de respuesta tras iniciar un viaje.
+message StartResponse {
+  string viaje_id = 1;     // ID único generado para el viaje.
+  double costo_cliente = 2; // Costo estimado del viaje para el cliente.
+}
+
+// Servicio gRPC para gestionar los viajes.
+service ViajeService {
+  // Método para iniciar un viaje, tomando una solicitud y devolviendo una respuesta.
+  rpc Start(StartRequest) returns (StartResponse) {}
+}
